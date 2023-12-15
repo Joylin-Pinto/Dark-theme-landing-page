@@ -1,0 +1,21 @@
+:root{
+    --intro-background: hsl(217, 28%, 15%);
+    --main-background:hsl(218, 28%, 13%);
+    --footer-ackground:hsl(219, 30%, 18%);
+    --testimonials-background:hsl(216, 53%, 9%);
+    --Cyan:hsl(176, 68%, 64%);
+    --Blue:hsl(198, 60%, 50%);
+    --Light-Red:hsl(0, 100%, 63%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px; 
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--intro-background);
+    height: 100vh;
+    
+}
