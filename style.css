@@ -8,19 +8,23 @@
     --Light-Red:hsl(0, 100%, 63%);
     --White: hsl(0, 0%, 100%);
 }
-body{
+*{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     font-size: 14px; 
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
     background-color: var(--intro-background);
     height: 100vh;
-    color: var(--White);
+    color: var(--White); 
 }
 nav {
     padding: 40px;
+    width: 100%;
 }
 nav ul{ 
     list-style-type: none;  
@@ -67,7 +71,73 @@ main .blue-btn{
     letter-spacing: 1px;
     font-size: 16px;
 }
-
+.middle-sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 10%; 
+}
+.middle-sec .four-sec{
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+    padding-block: 5%;
+    gap: 10px;
+}
+.middle-sec .four-sec img{
+    padding-bottom: 30px;
+}
+.middle-sec .four-sec p{
+    width: 55%;
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+}
+.middle-sec .four-sec .heading{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
 @media (min-width:100px) and (max-width:375px){
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    nav{
+        padding: 40px ;  
+    }
+    nav ul{
+        padding: 0;
+    }
+    main{
+        gap: 40px;
+    }
+    main #intorimg{
+        scale: 0.7;
+    }
+    main h1{
+        padding: 0% 5%;
+        font-size: 50px;
+    }
+    main p{
+        padding: 0% 10%;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    main .blue-btn{
+        width: 60%;  
+        padding-block: 30px;
+        font-size: 26px;
+    }
+    .middle-sec{ 
+        grid-template-columns: 1fr;
+        padding: 0;
+        width: 188vw;
+    }
+    .middle-sec .four-sec{
+        width: 100%;
+        grid-template-rows: 1fr;
+    }
     
 }
