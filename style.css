@@ -51,13 +51,10 @@ main{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-}
-main #intorimg{
-    scale: 0.7;
-}
+} 
 main h1{
     padding: 0% 30%;
-    font-size: 35px;
+    font-size: 45px;
 }
 main p{
     padding: 0% 36%;
@@ -77,11 +74,12 @@ main .blue-btn{
     font-size: 16px;
 }
 .middle-sec{
+    background-color: var(--main-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    padding: 10%; 
+    padding:5% 10%; 
 }
 .middle-sec .four-sec{
     display: grid; 
@@ -98,12 +96,111 @@ main .blue-btn{
     text-align: center;
     margin: 0;
     font-size: 15px;
+    line-height: 20px;
 }
 .middle-sec .four-sec .heading{
     font-size: 20px;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
 }
+.three{
+    background: var(--main-background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 8%;
+    align-items: center;
+    gap: 50px;
+}
+.three img{
+    scale: 1.2;
+    padding-inline: 10%;
+}
+.three .three-right{
+    display: grid;
+    gap: 30px;
+    width: 90%;
+}
+.three .three-right h1{
+    font-size: 50px;
+    width: 80%;
+}
+.three .three-right p{
+    font-size: 16px;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+.three .three-right .three-link{
+    width: 48%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.three .three-right .three-link:after{  
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4px;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    background-color:var(--Cyan)
+}
+.three .three-right .three-link a{
+    color: var(--Cyan);
+    text-decoration: none;
+    font-size: 18px;
+}
+.testimonials{
+    padding: 5%;
+    background-color: var(--main-background);
+}
+.testimonial-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.testimonial-cards .testimonial-card .name-sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    align-items: flex-start;
+}
+.testimonial-cards .testimonial-card img{
+    width: 50px;
+    border-radius: 50px;
+}
+@media (min-width:601px) and (max-width: 1000px){
+    main img{ 
+        width: 90%;
+        justify-self: center
+    }
+    main h1{
+        padding: 5% 10%;
+        font-size: 35px;
+    }
+    main p{
+        padding:0% 5%;
+    }
+    .three{
+        grid-template-columns: 1fr;
+        padding: 0;
+        align-items: center;
+        justify-items: center;
+    }
+    .three img{
+        width: 90%; 
+    }
+    .three .three-right{
+        width: 80%;
+    }
+    .three .three-right .three-link img{
+        width: 15%;
+    }
+}
+
 @media only screen and (max-width: 600px){
     body{ 
         height: 100vh;
@@ -128,6 +225,8 @@ main .blue-btn{
         justify-self: flex-start
     }
     main{
+        background: url(./images/bg-curvy-mobile.svg) no-repeat cover;
+        background-position: 0px 200px ;
         padding: 0;
     }
     main img{
@@ -142,5 +241,24 @@ main .blue-btn{
     }
     .middle-sec{
         grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .middle-sec .four-sec p{
+        width: 99%;
+    }
+    .three{
+        grid-template-columns: 1fr;
+        padding: 0;
+        align-items: center;
+        justify-items: center;
+    }
+    .three img{
+        width: 90%; 
+    }
+    .three .three-right{
+        width: 80%;
+    }
+    .three .three-right .three-link img{
+        width: 15%;
     }
 }
