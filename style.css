@@ -256,10 +256,59 @@ main .blue-btn{
 .footer{
     background-color: var(--footer-ackground);
     padding: 200px 100px;
+    padding-bottom: 50px;
 }
 .footer .footer-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+.footer #footer-logo{
+    padding-block: 50px;
+} 
+.footer-content .address{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+}
+.footer-content .address p{
+    width: 80%;
+}
+.footer-content .contact{
+    display: grid;
+    grid-template-rows: 0.3fr 0.3fr;
+    gap: 0px;
+}
+.footer-content .contact .phone, .footer-content .contact .mail {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    gap: 20px; 
+}
+.footer-content .contact .mail{
+    grid-template-columns: 0.7fr 1fr;
+}
+.footer-content ul{
+    list-style-type: none;
+    line-height: 30px;
+}
+.footer-content .socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: flex-start;
+}
+.footer-content .socials .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--White);
+    border-radius: 50px;
+}
+.footer-content .socials .social:first-of-type i{ 
+    justify-self: start; 
 }
 @media (min-width:601px) and (max-width: 1000px){
     main img{ 
@@ -308,6 +357,12 @@ main .blue-btn{
     }
     .testimonials #quotes{
         top: 7%;
+    }
+    .newsletter-card{
+        width: 95%;
+    }
+    .footer{
+        padding-inline: 20px;
     }
 }
 
@@ -405,10 +460,81 @@ main .blue-btn{
         top: -7%;
     }
     .newsletter{ 
-        po
+        position: unset;
+        margin-block: 200px;
     }
     .newsletter-card{
-        position: relative;
-        width: 98%;
+        position: unset;
+        padding-block: 50px;
+        width: 90%;
+        gap: 20px; 
+    }
+    .newsletter-card h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .newsletter-card p{
+        width: 75%;
+        font-size: 17px;
+        padding-block: 2px;
+    }
+    .newsletter-card form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
+    .newsletter-card form input{
+        width: 95%;
+        padding: 20px;
+    }
+    .newsletter-card form .blue-btn{
+        width: 95%;
+        padding: 20px;
+    }
+    .footer{
+        padding-inline: 30px;
+        padding-bottom: 30px;
+    }
+    .footer .footer-content{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        font-size: 20px;
+    }
+    .footer-content .address{
+        grid-template-columns: 0.2fr 1fr;
+    }
+    .footer-content .address img{
+        margin-top: 6px;
+    }
+    .footer-content .address p{
+        width: 90%;
+        font-size: 20px;
+
+    }
+    .footer .footer-content {
+        justify-items: flex-start;
+    }
+    .footer-content .contact{
+        gap: 30px;
+        width: 66%;
+    }
+    .footer-content .contact .phone{
+        grid-template-columns: 0.1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .footer-content .contact .mail{
+        grid-template-columns: 0.2fr 1fr;
+        justify-items: center;
+        align-items: center; 
+    }
+    .footer-content ul{
+        padding-block: 30px;
+    }
+    .footer-content .socials{
+        width: 100%;
+        justify-content:center;
+        align-items: center; 
+        grid-template-columns: 0.1fr 0.1fr 0.1fr;
     }
 }
