@@ -113,10 +113,12 @@
     <h1> Get early access today</h1>
     <p> It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
       questions, our support team would be happy to help you.</p>
-      <form action="">
-        <input type="email" placeholder="email@example.com">
+      <form action=""  onsubmit="handleonSubmit(event)">
+        <input type="text" placeholder="email@example.com" id="email">
         <button class="blue-btn">Get Started For Free</button>
+        <p id="error">Please enter a valid email address</p>
       </form>
+     
   </div>
   </div>
 
@@ -163,22 +165,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!--   
- 
-
-  
-  
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy -->
-
- 
+  </div> 
 </body>
+<script src="script.js"></script>
 </html>
