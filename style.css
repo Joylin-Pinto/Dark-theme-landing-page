@@ -23,6 +23,7 @@ body{
     color: var(--White); 
 }
 nav {
+    width: 100%;
     padding: 40px; 
     display: flex;
     align-items: center;
@@ -42,6 +43,7 @@ nav ul li{
     font-size: 16px;
 }
 main{
+    width: 100%;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -115,7 +117,7 @@ main .blue-btn{
     gap: 50px;
 }
 .three img{
-    scale: 1.2;
+    scale: 0.9;
     padding-inline: 10%;
 }
 .three .three-right{
@@ -158,12 +160,12 @@ main .blue-btn{
 }
 .testimonials{
     position: relative;
-    padding: 120px 13%; 
+    padding: 120px 13% 200px 13%; 
 } 
 .testimonials #quotes{  
     position: absolute;
-    top: 80px;
-    left: 240px; 
+    top: 16%;
+    left: 14%; 
     z-index: -2;  
 }
 .testimonial-cards{
@@ -197,9 +199,68 @@ main .blue-btn{
 }
 .testimonial-cards .testimonial-card .name-sec .name p:first-of-type{
     font-weight: 700;
-
+}
+.newsletter{
+    width: 100%; 
+    height: 10%;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
+.newsletter-card{
+    position: absolute;
+    top: -80%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    width: 55%; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--intro-background); 
+    padding: 3%; 
+    border-radius: 10px;
+}
+.newsletter-card p{
+    font-size: 16px;
+    width: 90%;
+    line-height: 20px;
+    text-align: center;
+    padding: 20px 0px;
+}
+.newsletter-card form{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.newsletter-card form input{
+    width: 96%;
+    padding: 15px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.newsletter-card form .blue-btn{
+    background: linear-gradient(to right, var(--Cyan), var(--Blue));
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 15px 25px;
+    color: var(--White);
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.footer{
+    background-color: var(--footer-ackground);
+    padding: 200px 100px;
+}
+.footer .footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 @media (min-width:601px) and (max-width: 1000px){
     main img{ 
         width: 90%;
@@ -212,20 +273,41 @@ main .blue-btn{
     main p{
         padding:0% 5%;
     }
+    .middle-sec{
+        padding-inline: 20px;
+    }
+    .middle-sec .four-sec{
+        text-align: center;
+    }
+    .middle-sec .four-sec p{
+        width: 90%;
+        font-size: 13px;
+    }
     .three{
         grid-template-columns: 1fr;
         padding: 0;
+        padding-block: 150px;
         align-items: center;
         justify-items: center;
     }
     .three img{
-        width: 90%; 
+        width: 80%; 
+        padding: 0;
     }
     .three .three-right{
         width: 80%;
     }
+    .three .three-right .three-link{
+        width: 80%; 
+    }
     .three .three-right .three-link img{
-        width: 15%;
+        width: 35px;
+    }
+    .testimonials .testimonial-cards{
+        grid-template-columns:1fr ;
+    }
+    .testimonials #quotes{
+        top: 7%;
     }
 }
 
@@ -233,9 +315,9 @@ main .blue-btn{
     body{ 
         height: 100vh;
     }
-    nav{
+    nav{ 
         padding: 10px ;  
-        display: flex;
+        display: flex; 
     }
     nav ul{ 
         padding: 0;
@@ -253,20 +335,23 @@ main .blue-btn{
         justify-self: flex-start
     }
     main{
-        background: url(./images/bg-curvy-mobile.svg) no-repeat cover;
-        background-position: 0px 200px ;
-        padding: 0;
-    }
+        background: url(./images/bg-curvy-mobile.svg) ;
+        background-repeat:  no-repeat;
+        background-size: contain;
+        background-position: 0px 530px;
+        padding: 0; 
+        background-color: var(--intro-background);
+     }
     main img{
-        width: 90%;
+        width: 90%; 
     }
     main h1{
         padding: 5%;
         font-size: 25px;
     }
     main p{
-        padding: 5%;
-    }
+        padding: 5%; 
+    } 
     .middle-sec{
         grid-template-columns: 1fr;
         gap: 50px;
@@ -277,16 +362,53 @@ main .blue-btn{
     .three{
         grid-template-columns: 1fr;
         padding: 0;
+        padding-block: 150px;
         align-items: center;
         justify-items: center;
     }
     .three img{
-        width: 90%; 
+        width: 80%; 
+        padding: 0;
     }
     .three .three-right{
-        width: 80%;
+        width: 90%; 
+        text-align: center; 
+        gap: 20px;
+    }
+    .three .three-right h1{
+        font-size: 16px;
+        text-align: left;
+    }
+    .three .three-right p{
+        text-align: left;
+        font-size: 14px;
+        line-height: 16px;
     }
     .three .three-right .three-link img{
         width: 15%;
+    }
+    .three .three-right .three-link{
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0px;
+        width: 100%;
+    }
+    .three .three-right .three-link a{
+        text-align: left;
+    }
+    .testimonials{
+        padding-block: 0px;
+    }
+    .testimonials .testimonial-cards{
+        grid-template-columns:1fr ; 
+    } 
+    .testimonials #quotes{
+        top: -7%;
+    }
+    .newsletter{ 
+        po
+    }
+    .newsletter-card{
+        position: relative;
+        width: 98%;
     }
 }
